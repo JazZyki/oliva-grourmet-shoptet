@@ -1,0 +1,90 @@
+@use 'abstract' as *;
+
+header {
+    &#header {
+        position: sticky;
+        top: 0;
+        background-color: $col-bg-darker;
+        z-index: 1000;
+
+        .header-top {
+            height: 100px;
+            .header-top-wrapper {
+                justify-content: space-between;
+                align-content: center;
+                height: 100%;
+
+                .site-name {
+                    width: max-content;
+                    height: auto;
+                    position: absolute;
+                    left: 0;
+
+                    a {
+                        padding: 5px 0;
+                        img {
+                            width: auto;
+                            height: 90px;
+                        }
+                    }
+                }
+
+                .navigation-buttons {
+                    max-width: max-content;
+                }
+            }
+        }
+
+        .header-bottom {
+            position: absolute;
+            top: 26px;
+            width: 60vw;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .navigation-in {
+                background-color: transparent;
+            }
+        }
+
+        nav {
+            .navigation-in {
+                a {
+                    b {
+                        position: relative;
+                        transition: all 0.3s ease-in-out;
+
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            width: 100%;
+                            height: 1px;
+                            position: absolute;
+                            bottom: -6px;
+                            left: 50%;
+                            background-color: $col-primary-hover;
+                            transform: translateX(-50%) scaleX(0);
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                    .submenu-arrow {
+                        display: inline-block;
+                        position: relative;
+                        top: -2px;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                        b {
+                            color: $col-tertiary-dark;
+
+                            &::after {
+                                transform: translateX(-50%) scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
