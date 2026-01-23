@@ -4,7 +4,7 @@ header {
     &#header {
         position: sticky;
         top: 0;
-        background-color: $col-bg-darker;
+        background-color: white;
         z-index: 1000;
 
         .header-top {
@@ -83,6 +83,16 @@ header {
                             }
                         }
                     }
+                }
+
+                .menu-level-2 {
+                    li {
+                        width: 33%;
+                    }
+                }
+
+                .menu-level-3 {
+                    display: none;
                 }
             }
         }

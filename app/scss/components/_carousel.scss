@@ -1,0 +1,77 @@
+@use 'abstract' as *;
+
+.carousel-wrapper {
+    .wide-carousel {
+        .carousel-inner {
+            max-height: 70vh;
+            min-height: unset !important;
+
+            .item {
+                height: 70vh;
+                max-height: 70vh;
+                background-color: $col-bg;
+                
+                a {
+                    display: flex;
+                    width: 80vw;
+                    margin: auto;
+                    position: relative;
+                    height: 100%;
+
+                    img {
+                        width: auto;
+                        height: 60vh;
+                        position: absolute;
+                        top: 50%;
+                        right: 10%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                        filter: drop-shadow(0 0 15px rgba(0, 0, 0, .3));
+                        transform: translateY(-50%) rotate(2deg);
+                    }
+
+                    .extended-banner-texts {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 30%;
+                        padding: 0;
+                        position: absolute;
+                        left: 10%;
+                        top: 50%;
+                        color: $col-text;
+                        background-color: transparent;
+                        transform: translateY(-50%);
+
+                        .extended-banner-pretitle {
+                            background-color: #ecf2e5;
+                            border-radius: 1rem;
+                            color: #8caf5d;
+                            font-family: Montserrat, sans-serif;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            padding: .25rem 1rem;
+                            width: -moz-max-content;
+                            width: max-content;
+                        }
+
+                    .extended-banner-title {
+                            font-size: 3rem;
+                            line-height: 3rem;
+                            font-weight: 900;
+                            margin-bottom: 1rem;
+                            @include expressive-font;
+                            strong {
+                                color: $col-primary-dark;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
