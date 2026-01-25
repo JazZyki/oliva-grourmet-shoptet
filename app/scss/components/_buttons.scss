@@ -2,18 +2,53 @@
 
 button,
 a {
+    &,
     &.btn {
         display: inline-block;
         margin: auto;
         padding: 1rem 2rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 600;
         text-align: center;
         text-decoration: none;
         border: none;
         border-radius: 3rem;
         cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        @include expressive-font;
+        transition: $t;
+        @include basic-font;
+
+        &[data-testid="buttonCookiesReject"] {
+            background-color: $col-secondary-light;
+            color: $col-text;
+
+            &:hover,
+            &:focus {
+                background-color: $col-secondary;
+                color: $col-white;
+            }
+        }
+
+        &[data-testid="buttonCookiesAccept"] {
+            background-color: $col-primary;
+            color: $col-white;
+
+            &:hover,
+            &:focus {
+                background-color: $col-primary-dark;
+                color: $col-white;
+            }
+        }
+
+        &[data-testid="cookiesSettings"] {
+            background-color: transparent;
+            color: $col-primary;
+            border: 2px solid $col-primary;
+
+            &:hover,
+            &:focus {
+                background-color: $col-primary;
+                color: $col-white;
+            }
+        }
     }
 }

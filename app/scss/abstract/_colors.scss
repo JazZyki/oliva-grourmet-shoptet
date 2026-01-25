@@ -3,14 +3,21 @@ $col-primary-dark: #53844b;
 $col-primary-hover: #385a33;
 
 $col-secondary: #e67e66;
-
+$col-secondary-light: #f4b8ad;
 $col-tertiary: #b6a964;
 $col-tertiary-dark: #8c7b45;
 
 $col-text: #0f172a;
+$col-white: #ffffff;
 
 $col-bg: #f8faf5;
 $col-bg-darker: #ecf2e5;
 $col-bg-darker-opacity: #ecf2e5cc;
 
 $col-background: #fffaf4;
+
+
+$col-link: $col-primary;
+$col-link-hover: $col-primary-dark;
+$col-link-line: $col-secondary;
+$col-link-line-hover: darken($col-secondary, 10%);

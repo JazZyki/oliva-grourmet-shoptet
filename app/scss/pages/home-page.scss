@@ -1,0 +1,12 @@
+@use './../abstract/' as *;
+
+.in-index {
+    .product-slider-holder {
+        background-color: $col-bg;
+        box-shadow: 300px 0 0 0 $col-bg, -300px 0 0 0 $col-bg;
+    }
+
+    .homepage-latest-contribution-full-width {
+        display: none;
+    }
+}

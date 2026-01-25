@@ -4,10 +4,10 @@ function menuMutation() {
         const isObchodBtn = isNavigation.querySelector('a[href="/obchod/"]');
         const isAboutShopBtn = isNavigation.querySelector('a[href="/o-nakupu/"]');
         if(isObchodBtn || isAboutShopBtn) {
-            isObchodBtn.addEventListener('click', function(event) {
+            /*isObchodBtn.addEventListener('click', function(event) {
                 event.preventDefault();
                 event.stopPropagation();
-            });
+            });*/
             isAboutShopBtn.addEventListener('click', function(event) {
                 event.preventDefault();
                 event.stopPropagation();

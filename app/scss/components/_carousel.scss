@@ -40,6 +40,7 @@
                         left: 10%;
                         top: 50%;
                         color: $col-text;
+                        text-align: left;
                         background-color: transparent;
                         transform: translateY(-50%);
 
@@ -60,6 +61,7 @@
                             line-height: 3rem;
                             font-weight: 900;
                             margin-bottom: 1rem;
+
                             @include expressive-font;
                             strong {
                                 color: $col-primary-dark;
@@ -68,6 +70,22 @@
 
                         p {
                             font-size: 1.2rem;
+                        }
+                    }
+
+                    .extended-banner-link {
+                        border-radius: 3rem;
+                        //padding-right: 2rem;
+
+                        &::after {
+                            margin-left: 1rem;
+                            transition: $t;
+                        }
+
+                        &:hover {
+                            &::after {
+                                margin-left: 1.5rem;
+                            }
                         }
                     }
                 }

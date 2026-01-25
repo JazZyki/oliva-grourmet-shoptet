@@ -1,0 +1,37 @@
+@use 'abstract' as *;
+
+.siteCookies {
+    left: unset;
+    right: 1rem;
+    color: $col-text;
+
+    .siteCookies__form {
+        flex-direction: column;
+        background-color: white;
+        border: 1px solid $col-primary;
+
+        .siteCookies__text {
+            a {
+                color: $col-link;
+                text-decoration: underline;
+                text-decoration-color: $col-link-line;
+                transition: $t;
+    
+                &:hover,
+                &:focus {
+                    color: $col-link-hover;
+                    text-decoration: underline;
+                    text-decoration-color: $col-link-line-hover;
+                }
+            }
+        }
+    }
+
+    &.siteCookies--scrolled {
+        width: 670px;
+        background-color: transparent;
+        left: unset;
+        margin-left: auto;
+        border-radius: 8px 8px 0 0;
+    }
+}
