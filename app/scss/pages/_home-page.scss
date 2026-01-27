@@ -9,4 +9,12 @@
     .homepage-latest-contribution-full-width {
         display: none;
     }
+
+    .homepage-products-heading-2 {
+        display: none;
+
+        + .product-slider-holder {
+            display: none;
+        }
+    }
 }

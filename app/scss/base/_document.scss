@@ -9,6 +9,12 @@ html {
 
 	body {
 		@include basic-font;
+		&.user-action-visible.search-window-visible {
+			&::before {
+				z-index: 1000;
+				background-color: $col-overlay;
+			}
+		}
 
 		a {
 			padding: 0;
@@ -27,7 +33,9 @@ html {
 
 		// TITLES
 
-		.h4.homepage-products-heading-1 {
+		.h4.homepage-products-heading-1,
+		h4,
+		h1.category-title {
 			width: max-content;
 			padding: 0;
 			position: relative;
@@ -35,11 +43,14 @@ html {
 			text-align: left;
 			//font-weight: 900;
 			font-size: 2.5rem;
+			strong {
+				color: $col-primary-dark;
+			}
 
 			&::after {
 				content: '';
 				display: block;
-				width: 50px;
+				width: 75px;
 				height: 4px;
 				position: absolute;
 				left: 0;

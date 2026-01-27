@@ -50,5 +50,37 @@ a {
                 color: $col-white;
             }
         }
+
+        &.add-to-cart-button {
+            i {
+                display: none;
+            }
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::after {
+                    content: '';
+                    width: 25px;
+                    height: 25px;
+                    display: inline-block;
+                    margin-left: 10px;
+                    background-image: url('data:image/svg+xml,<svg width="800" height="800" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><circle cx="7.5" cy="18.5" r="1.5" fill="%23ffffff"/><circle cx="16.5" cy="18.5" r="1.5" fill="%23ffffff"/><path stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l.6 3m0 0L7 15h10l2-7z"/></svg>');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    transition: $t;
+                }
+            }
+
+            &:hover {
+                span {
+                    &::after {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
     }
 }

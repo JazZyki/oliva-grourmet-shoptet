@@ -91,5 +91,14 @@
                 }
             }
         }
+
+        .carousel-control {
+            &.left,
+            &.right {
+                &::before {
+                    color: $col-primary;
+                }
+            }
+        }
     }
 }

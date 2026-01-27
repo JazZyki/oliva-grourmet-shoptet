@@ -6,7 +6,6 @@ titles.forEach((title) => {
         const titleText = titleElement.textContent.trim();
         const titleTextSplit = titleText.split(' ');
         const titleTextLength = titleTextSplit.length;
-        console.log(titleTextLength);
         switch (titleTextLength) {
             case 2:
                 titleElement.innerHTML = `${titleTextSplit[0]} <strong>${titleTextSplit[1]}</strong>`;
@@ -18,7 +17,7 @@ titles.forEach((title) => {
                 titleElement.innerHTML = `${titleTextSplit[0]} ${titleTextSplit[1]} ${titleTextSplit[2]} <strong>${titleTextSplit[3]}</strong>`;
                 break;
             case 5:
-                titleElement.innerHTML = `${titleTextSplit[0]} ${titleTextSplit[1]} ${titleTextSplit[2]} ${titleTextSplit[3]} <strong>${titleTextSplit[4]}</strong>`;
+                titleElement.innerHTML = `${titleTextSplit[0]} ${titleTextSplit[1]} ${titleTextSplit[2]} <strong>${titleTextSplit[3]} ${titleTextSplit[4]}</strong>`;
                 break;
             default:
                 // Do nothing if the title has 1 or more than 5 words
