@@ -1,0 +1,22 @@
+@use "./../abstract" as *;
+
+.type-category {
+  .category-content-wrapper {
+    .products {
+      gap: 1rem;
+      .product {
+        @include respond-to("xxl") {
+          width: 24%;
+        }
+      }
+    }
+  }
+
+  .category-top {
+    margin-bottom: 0;
+    border: none;
+  }
+  .products-top-wrapper {
+    display: none;
+  }
+}

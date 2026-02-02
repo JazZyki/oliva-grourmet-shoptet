@@ -1,84 +1,70 @@
-@use './../abstract' as *;
+@use "./../abstract" as *;
 
 .type-category {
-    aside {
-        border: none;
-        border-radius: 1rem 1rem 0 0;
+  main {
+    padding: 0 0 0 3rem;
+  }
 
-        .sidebar-inner {
-            border: none;
-
-            h4 {
-                font-size: 2rem;
-            }
-
-            .categories {
-                a {
-                    text-align: left;
-                    color: $col-primary;
-                    transition: $t;
-
-                    &:hover,
-                    &:focus {
-                        color: $col-primary-dark;
-                    }
-                }
-
-                ul {
-                    ul li, 
-                    li {
-                        a {
-                            padding-left: 30px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    main {
-        padding: 0 0 0 3rem;
-    }
-
-    .footer-newsletter-full-width {
-        display: none;
-    }
+  .footer-newsletter-full-width {
+    display: none;
+  }
 }
 
 .in-obchod {
-    .category-top {
-        .subcategories {
-            li {
-                a {
-                    flex-direction: column;
-                    height: auto;
-                    border: none;
-                    text-decoration: none;
-
-                    &::before {
-                        display: none;
-                    }
-        
-                    .image {
-                        width: 100%;
-                        height: 100px;
-
-                        img {
-                            max-height: unset;
-                            height: 100%;
-                        }        
-                    }
-
-                    .text {
-                        width: 100%;
-                        padding-left: 0;
-                        text-align: center;
-                        text-decoration: none;
-                        color: $col-primary;
-                        font-size: 1.05rem;
-                    }
-                }
-            }
+  .category-top {
+    border: none;
+    .subcategories {
+      li {
+        padding: 1.5rem;
+        @include respond-to("xxl") {
+          width: 20%;
         }
+        a {
+          flex-direction: column;
+          height: auto;
+          padding: 0;
+          border: none;
+          text-decoration: none;
+          background: transparent $bg-props;
+          background-image: url("/user/documents/upload/graphics/basic_background_pink-lighten-2.png");
+
+          &::before {
+            display: none;
+          }
+
+          .image {
+            width: 100%;
+            height: 100px;
+            transform: translateY(0);
+            transition: $t;
+
+            img {
+              max-height: unset;
+              height: 100%;
+            }
+          }
+
+          .text {
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+            text-decoration: none;
+            color: $col-primary;
+            font-size: 1.05rem;
+          }
+
+          &:hover {
+            background-color: transparent;
+            .image {
+              transform: translateY(-0.5rem);
+            }
+          }
+        }
+      }
     }
+  }
+
+  .products-top-wrapper {
+    display: none;
+  }
 }

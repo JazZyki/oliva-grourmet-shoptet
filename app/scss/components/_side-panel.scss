@@ -1,0 +1,93 @@
+@use "./../abstract" as *;
+
+aside {
+  height: max-content;
+  border: none;
+  border-radius: 1rem;
+
+  .sidebar-inner {
+    border: none;
+
+    h4 {
+      font-size: 2rem;
+    }
+
+    .categories {
+      a {
+        text-align: left;
+        color: $col-primary;
+        transition: $t;
+
+        &:hover,
+        &:focus {
+          color: $col-primary-dark;
+        }
+      }
+
+      ul {
+        ul li,
+        li {
+          a {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+
+    .box-filters {
+      .slider-wrapper {
+        .slider-header {
+          margin-top: 2rem;
+        }
+
+        .ui-slider-handle {
+          width: 26px;
+          height: 26px;
+          top: -11px;
+        }
+      }
+    }
+
+    .box-topProducts {
+      .top-products {
+        margin-top: 2rem;
+      }
+
+      .display-image {
+        margin-bottom: 1.5rem;
+        .top-products-image {
+          max-width: 50px;
+          max-height: 50px;
+          overflow: hidden;
+          img {
+            border-radius: 0;
+            mix-blend-mode: multiply;
+          }
+        }
+
+        .top-products-content {
+          width: calc(100% - 50px);
+          padding-left: 1.5rem;
+          text-align: left;
+          text-decoration: none;
+          color: $col-primary;
+          font-weight: 600;
+          transition: $t;
+
+          strong {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+
+          &:hover {
+            &,
+            span {
+              color: $col-primary-dark !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

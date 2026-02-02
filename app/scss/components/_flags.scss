@@ -1,0 +1,23 @@
+@use "abstract" as *;
+
+.flags {
+  width: calc(100% - 2rem);
+  top: 1rem;
+  left: 1rem;
+  .flag {
+    min-width: unset;
+    border-radius: 1rem;
+
+    &.flag-action {
+      background-color: $col-secondary;
+    }
+
+    &.flag-tip {
+      background-color: $col-tertiary;
+    }
+
+    &.flag-new {
+      background-color: $col-primary;
+    }
+  }
+}

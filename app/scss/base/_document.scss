@@ -1,63 +1,64 @@
-@use 'abstract' as *;
+@use "abstract" as *;
 
 html {
-	font-size: $font-size;
-	overflow-x: hidden;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-smooth: never;
+  font-size: $font-size;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
 
-	body {
-		@include basic-font;
-		&.user-action-visible.search-window-visible {
-			&::before {
-				z-index: 1000;
-				background-color: $col-overlay;
-			}
-		}
+  body {
+    @include basic-font;
+    &.user-action-visible.search-window-visible {
+      &::before {
+        z-index: 1000;
+        background-color: $col-overlay;
+      }
+    }
 
-		a {
-			padding: 0;
-			color: $col-link;
-			text-decoration: underline;
-			text-decoration-color: $col-link-line;
-			transition: $t;
+    a {
+      padding: 0;
+      color: $col-link;
+      text-decoration: underline;
+      text-decoration-color: $col-link-line;
+      transition: $t;
 
-			&:hover,
-			&:focus {
-				color: $col-link-hover;
-				text-decoration: underline;
-				text-decoration-color: $col-link-line-hover;
-			}
-		}
+      &:hover,
+      &:focus {
+        color: $col-link-hover;
+        text-decoration: underline;
+        text-decoration-color: $col-link-line-hover;
+      }
+    }
 
-		// TITLES
+    // TITLES
 
-		.h4.homepage-products-heading-1,
-		h4,
-		h1.category-title {
-			width: max-content;
-			padding: 0;
-			position: relative;
-			@include expressive-font;
-			text-align: left;
-			//font-weight: 900;
-			font-size: 2.5rem;
-			strong {
-				color: $col-primary-dark;
-			}
+    .h4.homepage-products-heading-1,
+    h4,
+    h1.category-title,
+    .p-detail-inner-header h1 {
+      width: max-content;
+      padding: 0;
+      position: relative;
+      @include expressive-font;
+      text-align: left;
+      //font-weight: 900;
+      font-size: 2.5rem;
+      strong {
+        color: $col-primary-dark;
+      }
 
-			&::after {
-				content: '';
-				display: block;
-				width: 75px;
-				height: 4px;
-				position: absolute;
-				left: 0;
-				background-color: $col-primary-dark;
-				margin-top: 10px;
-				border-radius: 2px;
-			}
-		}
-	}
+      &::after {
+        content: "";
+        display: block;
+        width: 75px;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        background-color: $col-primary-dark;
+        margin-top: 10px;
+        border-radius: 2px;
+      }
+    }
+  }
 }

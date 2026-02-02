@@ -1,86 +1,109 @@
-@use 'abstract' as *;
+@use "abstract" as *;
 
 button,
 a {
-    &,
-    &.btn {
-        display: inline-block;
-        margin: auto;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        text-align: center;
-        text-decoration: none;
-        border: none;
-        border-radius: 3rem;
-        cursor: pointer;
-        transition: $t;
-        @include basic-font;
+  &,
+  &.btn {
+    display: inline-block;
+    margin: auto;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: $t;
+    @include basic-font;
 
-        &[data-testid="buttonCookiesReject"] {
-            background-color: $col-secondary-light;
-            color: $col-text;
+    &[data-testid="buttonCookiesReject"] {
+      background-color: $col-secondary-light;
+      color: $col-text;
 
-            &:hover,
-            &:focus {
-                background-color: $col-secondary;
-                color: $col-white;
-            }
-        }
-
-        &[data-testid="buttonCookiesAccept"] {
-            background-color: $col-primary;
-            color: $col-white;
-
-            &:hover,
-            &:focus {
-                background-color: $col-primary-dark;
-                color: $col-white;
-            }
-        }
-
-        &[data-testid="cookiesSettings"] {
-            background-color: transparent;
-            color: $col-primary;
-            border: 2px solid $col-primary;
-
-            &:hover,
-            &:focus {
-                background-color: $col-primary;
-                color: $col-white;
-            }
-        }
-
-        &.add-to-cart-button {
-            i {
-                display: none;
-            }
-
-            span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                &::after {
-                    content: '';
-                    width: 25px;
-                    height: 25px;
-                    display: inline-block;
-                    margin-left: 10px;
-                    background-image: url('data:image/svg+xml,<svg width="800" height="800" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><circle cx="7.5" cy="18.5" r="1.5" fill="%23ffffff"/><circle cx="16.5" cy="18.5" r="1.5" fill="%23ffffff"/><path stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l.6 3m0 0L7 15h10l2-7z"/></svg>');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    transition: $t;
-                }
-            }
-
-            &:hover {
-                span {
-                    &::after {
-                        margin-left: 20px;
-                    }
-                }
-            }
-        }
+      &:hover,
+      &:focus {
+        background-color: $col-secondary;
+        color: $col-white;
+      }
     }
+
+    &[data-testid="buttonCookiesAccept"] {
+      background-color: $col-primary;
+      color: $col-white;
+
+      &:hover,
+      &:focus {
+        background-color: $col-primary-dark;
+        color: $col-white;
+      }
+    }
+
+    &[data-testid="cookiesSettings"] {
+      background-color: transparent;
+      color: $col-primary;
+      border: 2px solid $col-primary;
+
+      &:hover,
+      &:focus {
+        background-color: $col-primary;
+        color: $col-white;
+      }
+    }
+
+    &.btn-primary {
+      background-color: $col-white;
+      border: 1px solid $col-primary;
+      color: $col-primary;
+      transition: $t;
+
+      i {
+        margin-left: 10px !important;
+        transition: $t;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $col-primary;
+        color: $col-white;
+
+        i {
+          margin-left: 20px !important;
+        }
+      }
+    }
+
+    &.add-to-cart-button {
+      max-height: 48px;
+      i {
+        display: none;
+      }
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after {
+          content: "";
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          margin-left: 10px;
+          background-image: url('data:image/svg+xml,<svg width="800" height="800" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><circle cx="7.5" cy="18.5" r="1.5" fill="%23ffffff"/><circle cx="16.5" cy="18.5" r="1.5" fill="%23ffffff"/><path stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l.6 3m0 0L7 15h10l2-7z"/></svg>');
+          background-size: contain;
+          background-repeat: no-repeat;
+          transition: $t;
+        }
+      }
+
+      &:hover {
+        span {
+          &::after {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
 }

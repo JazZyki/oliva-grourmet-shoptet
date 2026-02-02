@@ -1,65 +1,61 @@
-@use 'abstract' as *;
+@use "abstract" as *;
 
 .benefitBanner {
-    &.position--benefitHomepage {
-        justify-content: center;
-        gap: 3rem;
+  &.position--benefitHomepage {
+    justify-content: center;
+    gap: 3rem;
 
-        .benefitBanner__item {
-            max-width: 350px;
-            height: auto;
-            padding: 0;
-            background-image: url('/user/documents/upload/graphics/basic_background_pink-lighten-2.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .benefitBanner__link {
-            position: relative;
-
-            .benefitBanner__picture {
-                flex: none;
-                width: 100%;
-                max-width: 300px;
-                height: 100%;
-    
-                img {
-                    width: auto;
-                    max-height: 100%;
-                    mix-blend-mode: multiply;
-                }
-            }
-    
-            .benefitBanner__content {
-                width: 11rem;
-                padding: 0.5rem 1rem;
-                position: absolute;
-                bottom: 1rem;
-                background-color: $col-primary;
-                border-radius: 3rem;
-                color: $col-white;
-                transition: $t;
-
-                .benefitBanner__title {
-                    font-size: 1rem;
-                    font-weight: 700;
-                    margin-bottom: 0;
-                }
-            }
-
-            &:hover {
-                opacity: 1;
-
-                .benefitBanner__content {
-                    background-color: $col-primary-dark;
-                    bottom: 2rem;
-                }
-            }
-        }
-
-        
-
-        
+    .benefitBanner__item {
+      max-width: 350px;
+      height: auto;
+      padding: 0;
+      background-image: url("/user/documents/upload/graphics/basic_background_pink-lighten-2.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
+
+    .benefitBanner__link {
+      position: relative;
+
+      .benefitBanner__picture {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+
+        img {
+          width: auto;
+          max-height: 100%;
+          mix-blend-mode: multiply;
+        }
+      }
+
+      .benefitBanner__content {
+        width: 11rem;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        bottom: 1rem;
+        background-color: $col-primary;
+        border-radius: 3rem;
+        color: $col-white;
+        transition: $t;
+
+        .benefitBanner__title {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+
+        .benefitBanner__content {
+          background-color: $col-primary-dark;
+          bottom: 2rem;
+        }
+      }
+    }
+  }
 }

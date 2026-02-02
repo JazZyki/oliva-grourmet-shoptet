@@ -1,0 +1,52 @@
+@use "abstract" as *;
+
+.category-header,
+.shp-tabs-holder {
+  padding: 0;
+  .listSorting__controls,
+  .shp-tabs {
+    li {
+      position: relative;
+      button,
+      a {
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0.5rem 1rem !important;
+        box-shadow: none !important;
+        color: $col-primary-hover;
+        text-decoration: none !important;
+
+        &:hover {
+          background-color: transparent;
+          color: $col-primary;
+        }
+
+        &.listSorting__control--current {
+          font-weight: 700;
+          color: $col-primary;
+
+          &:hover {
+            background-color: transparent;
+            color: $col-primary;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 1rem;
+        margin-left: 1rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background-color: $col-primary;
+        transform: translate(0, -50%);
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+}
